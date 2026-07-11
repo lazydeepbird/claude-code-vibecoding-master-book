@@ -8,6 +8,7 @@ Claude Code 바이브코딩 실습 예제 모음 저장소. 각 예제는 독립
 
 현재 예제:
 - `todo/` — React 18 + TypeScript + Vite + Tailwind CSS TODO 앱
+- `ai-chat/` — Next.js(App Router) + TypeScript + Tailwind 기반 Claude API 스트리밍 챗봇 (명세: `ai-chat/PRD.md`)
 
 ## 명령어 (todo/)
 
@@ -24,6 +25,25 @@ npm run preview   # 빌드 결과물 미리보기
 단일 테스트 파일 실행:
 ```bash
 cd todo && npx vitest run src/hooks/useTodos.test.ts
+```
+
+## 명령어 (ai-chat/)
+
+> 상세 명세는 `ai-chat/PRD.md` 참고. 앱 구현은 PRD 확정 후 별도 진행.
+
+```bash
+cd ai-chat
+
+npm run dev       # 개발 서버 (http://localhost:3000)
+npm run build     # 프로덕션 빌드
+npm run lint      # ESLint 검사
+npm run test      # 테스트 실행
+```
+
+Claude API를 호출하므로 `.env.local`에 API 키가 필요하다 (서버 전용, `.gitignore`에 포함):
+```
+ANTHROPIC_API_KEY=sk-ant-...
+# 선택: ANTHROPIC_MODEL=claude-opus-4-8
 ```
 
 ## 아키텍처

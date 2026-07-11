@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+/* react-markdown 렌더링 영역 최소 스타일 (typography 플러그인 미사용) */
+.prose-chat > :first-child {
+  margin-top: 0;
+}
+.prose-chat > :last-child {
+  margin-bottom: 0;
+}
+.prose-chat p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+.prose-chat ul,
+.prose-chat ol {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+.prose-chat ul {
+  list-style: disc;
+}
+.prose-chat ol {
+  list-style: decimal;
+}
+.prose-chat li {
+  margin: 0.25rem 0;
+}
+.prose-chat a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+.prose-chat code {
+  background: rgba(127, 127, 127, 0.18);
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+.prose-chat pre {
+  background: rgba(127, 127, 127, 0.18);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+.prose-chat pre code {
+  background: transparent;
+  padding: 0;
+}
+.prose-chat table {
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+}
+.prose-chat th,
+.prose-chat td {
+  border: 1px solid rgba(127, 127, 127, 0.4);
+  padding: 0.3rem 0.6rem;
+}
